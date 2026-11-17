@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title>DeckCraft</title>
-  <link data-trunk rel="rust" data-bin="deckcraft-web" data-wasm-opt="z" data-weak-refs />
+  <title>The AllCraft Deck</title>
+  <link data-trunk rel="rust" data-bin="deckcraft-web" data-wasm-opt="0" data-weak-refs />
   <link data-trunk rel="icon" href="../../assets/app-icon/deckcraft.ico" />
   <style>
-    html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #262626; }
+    html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #1e1d20; }
     #deckcraft_canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
     #deckcraft_loading { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
       color: #b8b8b8; font: 14px system-ui, sans-serif; pointer-events: none; }
@@ -15,6 +15,12 @@
 </head>
 <body>
   <canvas id="deckcraft_canvas"></canvas>
-  <div id="deckcraft_loading">Loading DeckCraft&hellip;</div>
+  <div id="deckcraft_loading">
+    <div style="margin-bottom:12px;font-size:15px;font-weight:600;color:#ececef">Loading The AllCraft Deck&hellip;</div>
+    <div style="width:240px;height:5px;background:#323238;border-radius:999px;overflow:hidden">
+      <div id="dk_load_bar" style="width:2%;height:100%;background:#f97316;border-radius:999px;transition:width 0.12s ease-out"></div>
+    </div>
+    <div id="dk_load_pct" style="margin-top:8px;font-size:12px;color:#9ca3af;font-variant-numeric:tabular-nums">Starting&hellip;</div>
+  </div>
 </body>
 </html>
